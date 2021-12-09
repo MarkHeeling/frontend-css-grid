@@ -1,1 +1,68 @@
 /*Maak hier jouw CSS!*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+            "grid-a"
+            "grid-b"
+            "grid-c"
+            "grid-d"
+            "grid-e"
+            "."
+            "grid-f";
+    background: #F9E4D1;
+    grid-gap: 16px;
+    color: white;
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+                "grid-a grid-c grid-c"
+                "grid-b grid-c grid-c"
+                "grid-b grid-e grid-d"
+                "grid-b grid-e ."
+                "grid-f grid-f grid-f";
+        background: #F9E4D1;
+        grid-gap: 16px;
+        color: white;
+    }
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    background: #BB3B46;
+    border: #AD5D5F solid 3px;
+    align-items: center;
+}
+
+#grid-a {
+    grid-area: grid-a;
+}
+
+#grid-b {
+    grid-area: grid-b;
+    padding: 0 15px;
+}
+
+#grid-c {
+    grid-area: grid-c;
+}
+
+#grid-d {
+    grid-area: grid-d;
+}
+
+#grid-e {
+    grid-area: grid-e;
+}
+
+#grid-f {
+    grid-area: grid-f;
+}
+
